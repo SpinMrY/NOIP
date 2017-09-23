@@ -1,0 +1,58 @@
+conky.config = {
+	background = true,
+	update_interval = 1.5,
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+	out_to_console = false,
+	override_utf8_locale = true,
+	double_buffer = true,
+	no_buffers = true,
+	text_buffer_size = 32768,
+	imlib_cache_size = 0,
+	own_window = true,
+	own_window_type = 'desktop',
+	own_window_argb_visual = true,
+	own_window_argb_value = 120,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	border_inner_margin = 10,
+	border_outer_margin = 0,
+	xinerama_head = 2,
+	alignment = 'top_right',
+	gap_x = 15,
+	gap_y = 40,
+	draw_shades = true,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+	use_xft = true,
+	font = 'Ubuntu Mono:size=12',
+	xftalpha = 0.8,
+	uppercase = false,
+	default_color = '#FFFFFF',
+	own_window_colour = '#000000',
+	minimum_width = 0, minimum_height = 0,
+};
+conky.text = [[
+	${color #00FFCC}SpinMrY Notebook${color}${goto 200}${font FontAwesome}${font}${voffset -2} ${time %d/%m/%y}  ${font FontAwesome}${font}${voffset -2} ${time %H:%M}
+	${hr}
+	${font FontAwesome}${font}${voffset -2} ${addrs wlp7s0}
+	${goto 20}${upspeedgraph wlp7s0 30,178 06E9F8 2104FA}${goto 202}${downspeedgraph wlp7s0 30,175 FFFF00 DD3A21}
+	${font FontAwesome}${goto 20}${font} ${upspeed wlp7s0}${font FontAwesome}${goto 202}${font} ${downspeed wlp7s0}
+	${hr}
+	${font FontAwesome}${font}${voffset -2}
+	${goto 20}${diskiograph_read 30,178 06E9F8 2104FA}${goto 202}${diskiograph_write 30,175 FFFF00 DD3A21}
+	${font FontAwesome}${goto 20}${font} ${diskio_read}${font FontAwesome}${goto 202}${font} ${diskio_write}
+	${hr}
+	${font FontAwesome}${font}${voffset -2} ${mem}/${memmax} (${memperc}%) | Swap: ${swapperc}%
+	${goto 20}${memgraph 30,355 AAF5D0 00B35B}
+	${hr}
+	${color #00FFCC}${font FontAwesome}${font}${voffset -2}${goto 20}     CPU:intel Core i7 6700HQ
+	${font FontAwesome} ${font}${voffset -2}${goto 20}${color #00FFCC}     GPU:Nvidia GTX 960M
+	${hr}
+	${goto 20}CPU0: ${cpu cpu0}%${goto 100}${cpubar 7,80 cpu0}${goto 222}CPU4: ${cpu cpu4}%${goto 302}${cpubar 7,80 cpu4}
+	${goto 20}CPU1: ${cpu cpu1}%${goto 100}${cpubar 7,80 cpu1}${goto 222}CPU5: ${cpu cpu5}%${goto 302}${cpubar 7,80 cpu5}
+	${goto 20}CPU2: ${cpu cpu2}%${goto 100}${cpubar 7,80 cpu2}${goto 222}CPU6: ${cpu cpu6}%${goto 302}${cpubar 7,80 cpu6}
+	${goto 20}CPU3: ${cpu cpu3}%${goto 100}${cpubar 7,80 cpu3}${goto 222}CPU7: ${cpu cpu7}%${goto 302}${cpubar 7,80 cpu7}
+	
+]];
+
