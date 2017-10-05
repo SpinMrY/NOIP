@@ -1,5 +1,7 @@
 #include <iostream>
+#include <cstdio>
 #include <algorithm>
+
 using namespace std;
 //define
 struct node{
@@ -16,8 +18,8 @@ bool cmp(const node &x,const node &y){
 //main
 int main(){
     ios::sync_with_stdio(false);
-    freopen("salesman.in","r",stdin);
-    freopen("salesman.out","w",stdout);
+//    freopen("salesman.in","r",stdin);
+//    freopen("salesman.out","w",stdout);
     bool b;
 	scanf("%d",&n);
 	for(i=0;i<n;i++)scanf("%d",&map[i].s);
