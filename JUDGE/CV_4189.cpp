@@ -1,4 +1,4 @@
-;#include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 //define
 int tot=1,n,trie[200010][27];
